@@ -1616,3 +1616,114 @@ footer {
     min-height: var(--travel-photo-height);
   }
 }
+
+/* Compact gallery updates: 174 × 116 px thumbnails, 2–4 per row */
+.image-strip,
+.route-image-strip {
+  grid-template-columns: repeat(auto-fit, minmax(174px, 174px));
+  justify-content: start;
+  align-items: start;
+}
+.day-image-strip,
+.region-image-strip {
+  grid-template-columns: repeat(auto-fit, minmax(174px, 174px));
+  justify-content: start;
+  align-items: start;
+}
+.route-image-strip {
+  margin: 0 0 18px;
+}
+.zoomable,
+.image-strip .zoomable,
+.day-image-strip .zoomable,
+.route-image-strip .zoomable,
+.region-image-strip .zoomable {
+  width: 174px;
+  height: 116px;
+  min-height: 116px;
+  aspect-ratio: auto;
+  border-radius: 14px;
+}
+.zoomable img,
+.image-strip .zoomable img,
+.day-image-strip .zoomable img,
+.route-image-strip .zoomable img,
+.region-image-strip .zoomable img {
+  width: 174px;
+  height: 116px;
+  min-height: 116px;
+}
+.image-strip .zoomable:only-child,
+.day-image-strip .zoomable:only-child,
+.route-image-strip .zoomable:only-child,
+.region-image-strip .zoomable:only-child {
+  grid-column: auto;
+}
+.food-main .image-strip {
+  max-width: 726px;
+}
+.route-title {
+  margin-bottom: 12px;
+}
+
+/* Region page: full-width zones and weather strategy */
+.region-layout {
+  grid-template-columns: 1fr;
+}
+.region-section-lead {
+  max-width: 980px;
+  color: #dbeaff;
+}
+.region-list-expanded {
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+.region-list-expanded article {
+  padding: 22px;
+}
+.region-list-expanded p {
+  max-width: 1040px;
+}
+.region-review {
+  margin-top: 14px;
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(3, 7, 18, 0.28);
+  border: 1px dashed rgba(125, 211, 252, 0.28);
+}
+.region-review b {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #ffd166;
+}
+.region-review ol {
+  margin: 0;
+  padding-left: 22px;
+  color: #dbeaff;
+  line-height: 1.75;
+}
+.weather-card-full {
+  width: 100%;
+}
+.weather-card-full .focus-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 22px;
+  padding-left: 22px;
+}
+
+@media (max-width: 680px) {
+  .image-strip,
+  .day-image-strip,
+  .route-image-strip,
+  .region-image-strip {
+    grid-template-columns: repeat(2, 174px);
+    overflow-x: auto;
+  }
+  .day-gallery {
+    grid-template-columns: 1fr;
+  }
+  .weather-card-full .focus-list {
+    grid-template-columns: 1fr;
+  }
+}
