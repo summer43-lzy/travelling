@@ -112,13 +112,14 @@ const days = [
   },
 ];
 const preorder = [
-  "6/5 晚：Cai Mam Bistro / Sun Bavaria — 10 人长桌",
-  "6/6 晚：Crab House / Xin Chao — 设团体收公费账",
-  "6/7 晚：日落小镇海鲜餐厅",
-  "去程 / 回程：确认 29 座大巴档期",
-  "6/6 包船：确认配备 Rod and Reel",
-  "酒店：预发房间分配表（姓名↔房号）",
-  "6/7 缆车：前台核实当日停运时刻表",
+  "护照与签证：核对护照有效期、签证/批文、往返机票与酒店确认单，统一截图备份",
+  "团队交通：锁定机场往返 29 座大巴或 16 座车 + 行李车，确认车牌、司机电话与接送时间",
+  "房间分配：向酒店预发 10 人姓名、房型、入住时间与房间分配表，确认押金/早餐政策",
+  "餐厅预订：确认 6/5、6/6、6/7 三晚 10 人桌，备注靠窗/室内备选、公费统一结账",
+  "出海包船：确认 An Thoi 包船档期、Rod and Reel 钓具、救生衣、淡水冲洗与雨天取消条款",
+  "票务与时间：提前购买/预约跨海缆车与香岛乐园票，向酒店复核 6/7 当日停运窗口",
+  "装备分装：准备防晒、防水袋、轻薄雨衣、速干衣、常用药、泳衣拖鞋与移动电源",
+  "群公告：发布集合时间、负责人分工、紧急联系人、越南文地址截图与付款/公费规则",
 ];
 const restaurants = [
   [
@@ -304,8 +305,44 @@ let page = "overview",
 const app = document.querySelector("#app"),
   entry = document.querySelector("#profileEntry"),
   modal = document.querySelector("#modal");
-let calendarText =
-  "6/5 抵达富国岛，亲吻桥与欢迎晚餐\n6/6 包船出海，阳东夜市\n6/7 跨海缆车，Bai Sao 白沙滩\n6/8 退房返程深圳";
+const calendarEvents = [
+  {
+    day: "05",
+    month: "6月",
+    weekday: "周五",
+    date: "2025-06-05",
+    title: "抵达富国岛",
+    memo: "机场接驳、亲吻桥拍照、欢迎晚餐",
+    tag: "抵达",
+  },
+  {
+    day: "06",
+    month: "6月",
+    weekday: "周六",
+    date: "2025-06-06",
+    title: "包船出海",
+    memo: "An Thoi 港集合、浮潜钓鱼、阳东夜市",
+    tag: "出海",
+  },
+  {
+    day: "07",
+    month: "6月",
+    weekday: "周日",
+    date: "2025-06-07",
+    title: "缆车与白沙滩",
+    memo: "赶早班缆车、香岛乐园、Bai Sao 慢跑",
+    tag: "游玩",
+  },
+  {
+    day: "08",
+    month: "6月",
+    weekday: "周一",
+    date: "2025-06-08",
+    title: "退房返程",
+    memo: "统一退房、机场托运、10:40 航班",
+    tag: "返程",
+  },
+];
 
 const placeImages = {
   kissBridge: {
@@ -615,7 +652,7 @@ function render() {
   bind();
 }
 function overview() {
-  return `<section class="page hero"><div class="hero-card"><div class="hero-copy"><p class="eyebrow">2025 年 6 月 5 日（周五）— 6 月 8 日（周一）・4 天 3 夜</p><h1>富国岛行程概览</h1><p class="hero-subtitle-en">Phu Quoc Island Itinerary Overview</p><p>本期主题是体验浪漫的海岛风景~</p></div></div><section class="overview-module"><div class="module-head"><div><h2 class="big-module-title">四天三夜节奏</h2></div><span>4D3N / South Phu Quoc</span></div><div class="summary-grid">${days.map((d) => `<article class="summary-card"><div class="day-title"><span>${d.date}</span><b>${d.title}</b></div><p class="core">核心：${d.core}</p>${d.summary.map(([t, x]) => `<div class="summary-row"><em>${t}</em><span>${x}</span></div>`).join("")}</article>`).join("")}</div></section><section class="panel itinerary-panel"><div class="module-head"><div><h2 class="big-module-title">每日行程安排</h2></div></div>${days.map((d, di) => `<div class="day-plan"><div class="day-head"><h3><span class="day-date">${d.date}</span><span class="day-name">${d.title}</span></h3><span class="day-core">${d.core}</span></div><div class="day-gallery"><div><b>今日涵盖地点美图</b><span>${dayGalleries[di].title}</span></div>${imageStrip(dayGalleries[di].images, `${d.date} ${dayGalleries[di].title}`, "day-image-strip")}</div><div class="timeline">${d.items.map((it, ii) => `<div class="timeline-item"><div class="time">🕒 ${it[0]}</div><div class="event"><span class="tag" data-kind="${it[2]}">${it[2]}</span><p>${it[1]}</p></div><button class="favorite" data-di="${di}" data-ii="${ii}">♡ 收藏</button></div>`).join("")}</div><div class="notes"><b>餐饮・运力・注意事项</b>${d.notes.map((n) => `<p>● ${n}</p>`).join("")}</div></div>`).join("")}</section><section class="panel checklist"><h2>出发前 3 天・预订清单</h2><div>${preorder.map((x) => `<p>✅ ${x}</p>`).join("")}</div></section></section>`;
+  return `<section class="page hero"><div class="hero-card"><div class="hero-copy"><p class="eyebrow">2025 年 6 月 5 日（周五）— 6 月 8 日（周一）・4 天 3 夜</p><h1>富国岛行程概览</h1><p class="hero-subtitle-en">Phu Quoc Island Itinerary Overview</p><p>本期主题是体验浪漫的海岛风景~</p></div></div><section class="overview-module"><div class="module-head"><div><h2 class="big-module-title">四天三夜节奏</h2></div><span>4D3N / South Phu Quoc</span></div><div class="summary-grid">${days.map((d) => `<article class="summary-card"><div class="day-title"><span>${d.date}</span><b>${d.title}</b></div><p class="core">核心：${d.core}</p>${d.summary.map(([t, x]) => `<div class="summary-row"><em>${t}</em><span>${x}</span></div>`).join("")}</article>`).join("")}</div></section><section class="panel itinerary-panel"><div class="module-head"><div><h2 class="big-module-title">每日行程安排</h2></div></div>${days.map((d, di) => `<div class="day-plan"><div class="day-head"><h3><span class="day-date">${d.date}</span><span class="day-name">${d.title}</span></h3><span class="day-core">${d.core}</span></div><div class="day-gallery"><div><b>今日涵盖地点美图</b><span>${dayGalleries[di].title}</span></div>${imageStrip(dayGalleries[di].images, `${d.date} ${dayGalleries[di].title}`, "day-image-strip")}</div><div class="timeline">${d.items.map((it, ii) => `<div class="timeline-item"><div class="time">🕒 ${it[0]}</div><div class="event"><span class="tag" data-kind="${it[2]}">${it[2]}</span><p>${it[1]}</p></div><button class="favorite" data-di="${di}" data-ii="${ii}">♡ 收藏</button></div>`).join("")}</div><div class="notes"><b>餐饮・运力・注意事项</b>${d.notes.map((n) => `<p>● ${n}</p>`).join("")}</div></div>`).join("")}</section><section class="panel checklist"><h2>出发前3天筹备清单</h2><div>${preorder.map((x) => `<p>✅ ${x}</p>`).join("")}</div></section></section>`;
 }
 
 function food(sort = "distance", cuisine = "全部") {
@@ -708,7 +745,7 @@ function login() {
   return `<section class="page narrow"><div class="login-card"><div class="avatar large">👤</div><h1>登录</h1><p>仅展示三方登录样式，点击任意方式即可进入个人中心体验收藏与日历功能。</p>${["使用 Google 登录", "使用 Apple 登录", "使用微信登录"].map((x) => `<button class="oauth">${x}<span>↗</span></button>`).join("")}</div></section>`;
 }
 function profile() {
-  return `<section class="page"><div class="page-title"><span>⭐</span><div><p class="eyebrow">收藏备忘与应用日历</p><h1>个人中心</h1></div></div><section class="panel"><h2>星标信息列表</h2>${favorites.length ? `<div class="fav-list">${favorites.map((f) => `<article><b>${esc(f.title)}</b><span>${f.day}｜${f.time}｜${f.tag}</span><p>备注：${esc(f.note || "未填写")}</p></article>`).join("")}</div>` : `<button class="empty">你还未收藏信息，点击去收藏 ›</button>`}</section><section class="panel"><h2>📅 日历</h2><p class="hint">已关联应用日历视图：你可以手动更新内容，用于复制到系统日历或团队群公告。</p><textarea class="calendar">${esc(calendarText)}</textarea></section><button class="logout">↩ 登出</button></section>`;
+  return `<section class="page"><div class="page-title"><span>⭐</span><div><p class="eyebrow">收藏备忘与应用日历</p><h1>个人中心</h1></div></div><section class="panel"><h2>星标信息列表</h2>${favorites.length ? `<div class="fav-list">${favorites.map((f) => `<article><span class="fav-date">${f.day}｜${f.time}｜${f.tag}</span><b class="fav-title">${esc(f.title)}</b><p>备注：${esc(f.note || "未填写")}</p></article>`).join("")}</div>` : `<button class="empty">你还未收藏信息，点击去收藏 ›</button>`}</section><section class="panel calendar-panel"><h2>📅 行程日历</h2><p class="hint">按日期列出每日重点事项，像日历一样快速查看备忘。</p><div class="calendar-board">${calendarEvents.map((event) => `<article class="calendar-card"><div class="calendar-date"><span>${event.month}</span><strong>${event.day}</strong><em>${event.weekday}</em></div><div class="calendar-event"><span class="tag">${event.tag}</span><b>${event.title}</b><p>${event.memo}</p><small>${event.date}</small></div></article>`).join("")}</div></section><button class="logout">↩ 登出</button></section>`;
 }
 function bind() {
   document
@@ -764,9 +801,6 @@ function bind() {
     loggedIn = false;
     setPage("overview");
   });
-  document
-    .querySelector(".calendar")
-    ?.addEventListener("input", (e) => (calendarText = e.target.value));
 }
 function showImageModal(src, title, source, sourceUrl) {
   modal.className = "modal-backdrop image-modal-backdrop";
