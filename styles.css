@@ -953,20 +953,70 @@ select {
   background: rgba(20, 124, 255, 0.08);
   border: 1px solid var(--line);
 }
-.fav-list span {
+.fav-date {
   display: block;
-  margin-top: 6px;
   color: var(--muted);
+  font-size: 14px;
 }
-.calendar {
-  width: 100%;
-  min-height: 150px;
-  padding: 16px;
-  border-radius: 18px;
+.fav-title {
+  display: block;
+  margin-top: 8px;
+  color: #fff5b8;
+  font-size: 18px;
+  line-height: 1.55;
+  text-shadow: 0 0 18px rgba(250, 204, 21, 0.25);
+}
+.calendar-board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.calendar-card {
+  display: grid;
+  grid-template-columns: 82px 1fr;
+  min-height: 168px;
+  overflow: hidden;
+  border-radius: 22px;
+  background: rgba(20, 124, 255, 0.08);
   border: 1px solid var(--line);
-  background: #020816;
+}
+.calendar-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  background: linear-gradient(180deg, rgba(30, 136, 255, 0.95), rgba(10, 75, 196, 0.95));
   color: white;
-  resize: vertical;
+}
+.calendar-date span,
+.calendar-date em {
+  font-size: 12px;
+  font-style: normal;
+  color: rgba(234, 244, 255, 0.82);
+}
+.calendar-date strong {
+  font-size: 36px;
+  line-height: 1;
+}
+.calendar-event {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 16px;
+}
+.calendar-event b {
+  margin-top: 10px;
+  color: white;
+  font-size: 18px;
+}
+.calendar-event p {
+  margin: 8px 0;
+  color: #dbeaff;
+}
+.calendar-event small {
+  color: var(--muted);
 }
 .logout {
   display: inline-flex;
@@ -1302,6 +1352,9 @@ footer {
     grid-column: 2;
     justify-self: start;
   }
+  .calendar-board {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 680px) {
@@ -1327,6 +1380,7 @@ footer {
   .route-body,
   .two-col,
   .checklist div,
+  .calendar-board,
   .region-grid,
   .region-layout,
   .culture-grid,
@@ -1349,6 +1403,10 @@ footer {
   }
   .favorite {
     grid-column: auto;
+  }
+  .calendar-card {
+    grid-template-columns: 72px 1fr;
+    min-height: 150px;
   }
   nav button {
     white-space: nowrap;
