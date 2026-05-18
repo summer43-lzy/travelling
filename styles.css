@@ -1363,3 +1363,204 @@ footer {
     min-height: 260px;
   }
 }
+
+/* Shared clickable image strips */
+.image-strip,
+.day-image-strip,
+.route-image-strip,
+.region-image-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+.image-strip {
+  margin-top: 16px;
+}
+.route-image-strip {
+  margin: -6px 0 18px;
+}
+.region-image-strip {
+  position: relative;
+  z-index: 1;
+  margin-top: 22px;
+}
+.zoomable {
+  position: relative;
+  overflow: hidden;
+  min-height: 96px;
+  padding: 0;
+  border-radius: 16px;
+  background: rgba(20, 124, 255, 0.12);
+  border: 1px solid rgba(125, 211, 252, 0.22);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+}
+.zoomable:after {
+  content: "点击放大";
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  padding: 5px 8px;
+  border-radius: 999px;
+  color: white;
+  background: rgba(3, 7, 18, 0.66);
+  font-size: 11px;
+  font-weight: 900;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: all 0.2s ease;
+}
+.zoomable:hover:after,
+.zoomable:focus-visible:after {
+  opacity: 1;
+  transform: translateY(0);
+}
+.zoomable img {
+  width: 100%;
+  height: 100%;
+  min-height: 96px;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.24s ease, filter 0.24s ease;
+}
+.zoomable:hover img,
+.zoomable:focus-visible img {
+  transform: scale(1.06);
+  filter: saturate(1.14) brightness(1.08);
+}
+.day-gallery {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 18px;
+  padding: 14px;
+  border-radius: 20px;
+  background: rgba(3, 7, 18, 0.32);
+  border: 1px solid rgba(125, 211, 252, 0.18);
+}
+.day-gallery b,
+.day-gallery span {
+  display: block;
+}
+.day-gallery b {
+  color: #ffd166;
+  margin-bottom: 6px;
+}
+.day-gallery span {
+  color: #dbeaff;
+  line-height: 1.55;
+}
+.big-module-title {
+  margin-bottom: 0;
+  font-size: clamp(28px, 4vw, 40px);
+}
+.image-modal-backdrop {
+  z-index: 40;
+}
+.image-modal {
+  position: relative;
+  width: min(980px, 94vw);
+  padding: 16px;
+  border-radius: 30px;
+  background: rgba(3, 7, 18, 0.94);
+  border: 1px solid var(--line-strong);
+  box-shadow: 0 36px 110px rgba(0, 0, 0, 0.55);
+}
+.image-modal img {
+  width: 100%;
+  max-height: 76vh;
+  display: block;
+  object-fit: contain;
+  border-radius: 22px;
+  background: #020816;
+}
+.image-modal p {
+  margin: 12px 6px 2px;
+  color: #dbeaff;
+  font-weight: 800;
+}
+.image-modal-close {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  z-index: 2;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: white;
+  background: rgba(3, 7, 18, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  font-size: 25px;
+  line-height: 1;
+}
+
+/* Enhanced geo map details */
+.advanced-map .vietnam-map {
+  background:
+    linear-gradient(rgba(125, 211, 252, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(125, 211, 252, 0.08) 1px, transparent 1px),
+    radial-gradient(circle at 20% 78%, rgba(45, 212, 191, 0.2), transparent 22%),
+    linear-gradient(180deg, rgba(14, 165, 233, 0.16), rgba(2, 8, 22, 0.94));
+  background-size: 44px 44px, 44px 44px, auto, auto;
+}
+.geo-grid,
+.sea-label,
+.map-scale {
+  position: absolute;
+  z-index: 3;
+  color: rgba(234, 244, 255, 0.5);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+.geo-grid.lat-a { left: 8px; top: 62%; }
+.geo-grid.lat-b { left: 8px; top: 38%; }
+.geo-grid.lon-a { left: 28%; bottom: 8px; }
+.geo-grid.lon-b { right: 24%; bottom: 8px; }
+.sea-label {
+  left: 20px;
+  top: 28px;
+  color: rgba(125, 211, 252, 0.42);
+}
+.map-scale {
+  right: 18px;
+  bottom: 48px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: #061225;
+  background: linear-gradient(135deg, #7dd3fc, #fef08a);
+}
+.travel-arc {
+  position: absolute;
+  z-index: 1;
+  left: 27%;
+  bottom: 17%;
+  width: 120px;
+  height: 55px;
+  border-top: 2px dashed rgba(250, 204, 21, 0.68);
+  border-radius: 50% 50% 0 0;
+  transform: rotate(-7deg);
+}
+.region-intro-card strong,
+.flow-steps strong,
+.region-list strong,
+.weather-card strong,
+.culture-grid strong,
+.map-legend strong {
+  color: #fff3b0;
+  font-weight: 950;
+}
+
+@media (max-width: 680px) {
+  .image-strip,
+  .day-image-strip,
+  .route-image-strip,
+  .region-image-strip,
+  .day-gallery {
+    grid-template-columns: 1fr;
+  }
+  .zoomable,
+  .zoomable img {
+    min-height: 170px;
+  }
+}
