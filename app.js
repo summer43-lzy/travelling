@@ -366,32 +366,132 @@ const placeImages = {
 const restaurantImageLookup = {
   "Cai Mam Bistro": [{
     src: "https://caimamcom.storage.googleapis.com/wp-content/uploads/2024/08/17181252/6138596701351119896.jpg",
-    caption: "Cai Mam Bistro 实景",
+    caption: "Cai Mam Bistro 店内与餐品实景",
     source: "Cai Mam 官网 / Google 图片",
     sourceUrl: "https://caimam.com/branches/cai-mam-bistro-vietnamese-noodles-cafe/",
   }],
-  "Sun Bavaria GastroPub": [placeImages.sunsetTown],
+  "Sun Bavaria GastroPub": [{
+    src: "https://visitphuquoc.com.vn/VisitPhuQuoc/_default_upload_bucket/1827/image-thumb__1827__720_jpg/nha%20hang%20bia%20sun%20bavaria%20bistro%203%402x.9e2a84e2.673fd9b6.jpg",
+    caption: "Sun Bavaria GastroPub 海边餐厅实景",
+    source: "Visit Phu Quoc",
+    sourceUrl: "https://visitphuquoc.com.vn/en/sun-bavaria-gastropub",
+  }],
   "Draft Beer Sunset Town": [{
     src: "https://visitphuquoc.com.vn/VisitPhuQuoc/POINT/%C4%82N%20U%E1%BB%90NG/%C4%90%E1%BB%8Ba%20%C4%91i%E1%BB%83m%20%C4%83n%20u%E1%BB%91ng/Nh%C3%A0%20h%C3%A0ng/1542/image-thumb__1542__720_jpg/Draft%20Beer%20SST2.2dfb1896.jpg",
-    caption: "Draft Beer Sunset Town 实景",
-    source: "Visit Phu Quoc / Google 图片",
+    caption: "Draft Beer Sunset Town 餐厅实景",
+    source: "Visit Phu Quoc",
     sourceUrl: "https://visitphuquoc.com.vn/en/draft-beer-sunset-town-restaurant",
+  }],
+  "Kiss Bridge Coffee & Bar": [{
+    src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kiss_Bridge_at_sunset_Phu_Quoc_Island_Vietnam.jpg?width=640",
+    caption: "Kiss Bridge Coffee & Bar 周边亲吻桥海景",
+    source: "Wikimedia Commons",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Kiss_Bridge_at_sunset_Phu_Quoc_Island_Vietnam.jpg",
+  }],
+  "RuNam Phu Quoc": [{
+    src: "https://lh3.googleusercontent.com/p/AF1QipNcuv4lShF5nMks7IqgDlEOrEotWGxunoOZXTU1=w1200-h900-k-no",
+    caption: "RuNam Phu Quoc 咖啡馆实景",
+    source: "Spinach / Google Maps 图片",
+    sourceUrl: "https://spinach.guide/venues/runam-phu-quoc-191232/",
+  }],
+  "Mango Bay On The Rocks": [{
+    src: "https://media-cdn.tripadvisor.com/media/photo-s/1a/1c/e3/49/mango-bay-on-the-rocks.jpg",
+    caption: "Mango Bay On The Rocks 海边餐厅实景",
+    source: "Tripadvisor 图片",
+    sourceUrl: "https://www.tripadvisor.com/LocationPhotoDirectLink-g469418-d3589227-i438022985-Mango_Bay_Restaurant-Phu_Quoc_Island_Kien_Giang_Province.html",
+  }],
+  "The Home Pizza": [{
+    src: "https://phuquocmap.com/wp-content/uploads/2025/02/IMG_6164.jpeg",
+    caption: "The Home Pizza 餐厅空间实景",
+    source: "Phu Quoc Map",
+    sourceUrl: "https://phuquocmap.com/en/the-home-pizza-phu-quoc/",
+  }],
+  "Saigonese Eatery": [{
+    src: "https://static.wixstatic.com/media/11062b_4c3d0d34d66b496b8c6f0d479e9f0d25~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85/11062b_4c3d0d34d66b496b8c6f0d479e9f0d25~mv2.jpg",
+    caption: "Saigonese Eatery 餐厅氛围实景",
+    source: "Saigonese Eatery 官网",
+    sourceUrl: "https://www.saigoneseeatery.com/",
   }],
   "Xin Chao Seafood Restaurant": [{
     src: "https://en.gurutto-vietnam.com/common/image2.php?1=1&f=%2Fdb_img%2Fcl_img%2F6371%2Fmain_img_2025052713321599.jpg&h=600",
-    caption: "Xin Chao 海鲜菜品实景",
-    source: "Gurutto Vietnam / Google 图片",
+    caption: "Xin Chao Seafood Restaurant 海鲜菜品实景",
+    source: "Gurutto Vietnam",
     sourceUrl: "https://en.gurutto-vietnam.com/detail/6371/index.html",
   }],
   "Crab House Phu Quoc": [{
     src: "https://img02.restaurantguru.com/c0bb-Restaurant-Nha-Ghe-Phu-Quoc-food.jpg",
-    caption: "Crab House 海鲜菜品实景",
-    source: "Restaurant Guru / Google 图片",
+    caption: "Crab House Phu Quoc 海鲜拼盘实景",
+    source: "Restaurant Guru",
     sourceUrl: "https://restaurantguru.com/Crab-House-Phu-Quoc",
   }],
-  "Paradiso Restaurant / Beach Club": [placeImages.baiSao],
-  "Thanh Nga Seafood": [placeImages.baiSao],
+  "Bun Quay Kien Xay": [{
+    src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/97/e8/86/kien-xay-bun-quay.jpg?w=1200&h=900&s=1",
+    caption: "Bun Quay Kien Xay 搅粉实景",
+    source: "Tripadvisor 图片",
+    sourceUrl: "https://www.tripadvisor.com/LocationPhotoDirectLink-g1184679-d12269141-i412517510-Kien_Xay_Bun_Quay_Coffee_Pizza_Regina-Duong_Dong_Phu_Quoc_Island_Kien_.html",
+  }],
+  "Ra Khoi Restaurant": [{
+    src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/bf/62/78/ra-khoi-restaurant.jpg?w=1200&h=900&s=1",
+    caption: "Ra Khoi Restaurant 海鲜菜品实景",
+    source: "Tripadvisor 图片",
+    sourceUrl: "https://www.tripadvisor.com/Search?q=Ra%20Khoi%20Restaurant%20Phu%20Quoc",
+  }],
+  "Oc Noc Quan": [{
+    src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/9e/bf/20/oc-noc-quan.jpg?w=1200&h=900&s=1",
+    caption: "Oc Noc Quan 螺类海鲜实景",
+    source: "Tripadvisor / Google 图片",
+    sourceUrl: "https://www.google.com/search?q=Oc+Noc+Quan+Phu+Quoc",
+  }],
+  "Phung Fish Noodle": [{
+    src: "https://lh7-rt.googleusercontent.com/docsz/AD_4nXf_ePOzjzlm-28TgoaACxvik1CGWFRepgjzL6Zxs6KRtloRvVagPyVWn4mxammkVQ9lQ_EOdaue0woTlERfBxAl6r-AajPAZbe4aOnwzXPIJ7_NkQ5M72q2xuGR0XPyKipIURMDhQ?key=0vxmSbA2eyCCXYpPwYBZJS00",
+    caption: "Phung Fish Noodle 鱼粉实景",
+    source: "Visit Phu Quoc / Google 图片",
+    sourceUrl: "https://visitphuquoc.com.vn/en/where-to-enjoy-the-best-fish-cake-noodle-soup-in-phu-quoc",
+  }],
+  "Bep Ba Ngoai": [{
+    src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/08/99/f0/restaurant-terrace-decorated.jpg?w=1200&h=900&s=1",
+    caption: "Bep Ba Ngoai 餐厅露台实景",
+    source: "Tripadvisor 图片",
+    sourceUrl: "https://www.tripadvisor.fr/Restaurant_Review-g1184679-d32909124-Reviews-Grandma_s_Kitchen-Duong_Dong_Phu_Quoc_Island_Kien_Giang_Province.html",
+  }],
+  "Chuon Chuon Bistro & Sky Bar": [{
+    src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/36/2d/c8/chuon-chuon-bistro-sky.jpg?w=1200&h=900&s=1",
+    caption: "Chuon Chuon Bistro & Sky Bar 山顶景观实景",
+    source: "Tripadvisor 图片",
+    sourceUrl: "https://www.tripadvisor.com/Search?q=Chuon%20Chuon%20Bistro%20Sky%20Bar%20Phu%20Quoc",
+  }],
+  "Quan Cat Bien": [{
+    src: "https://images.foody.vn/res/g1/1760/prof/s576x330/foody-mobile-quan-cat-bien-hai-san-do-nuong-phu-quoc.jpg",
+    caption: "Quan Cat Bien 海鲜烧烤实景",
+    source: "Foody.vn",
+    sourceUrl: "https://www.foody.vn/phu-quoc/quan-cat-bien-hai-san-do-nuong",
+  }],
+  "Oc 343": [{
+    src: "https://static.vinwonders.com/production/quan-oc-343-phu-quoc-1.jpg",
+    caption: "Oc 343 螺类海鲜实景",
+    source: "VinWonders / Google 图片",
+    sourceUrl: "https://triphunter.vn/places/phu-quoc/items/quan-oc-343",
+  }],
+  "Com Tam Huynh Nhu": [{
+    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/C%C6%A1m_t%E1%BA%A5m_s%C6%B0%E1%BB%9Dn_b%C3%AC_ch%E1%BA%A3.jpg/640px-C%C6%A1m_t%E1%BA%A5m_s%C6%B0%E1%BB%9Dn_b%C3%AC_ch%E1%BA%A3.jpg",
+    caption: "Com Tam Huynh Nhu 碎米饭参考实景",
+    source: "Wikimedia Commons",
+    sourceUrl: "https://commons.wikimedia.org/wiki/Category:C%C6%A1m_t%E1%BA%A5m",
+  }],
+  "Thanh Nga Seafood": [{
+    src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/f0/2e/9d/thanh-nga-seafood.jpg?w=1200&h=900&s=1",
+    caption: "Thanh Nga Seafood 白沙滩海鲜实景",
+    source: "Tripadvisor / Google 图片",
+    sourceUrl: "https://www.google.com/search?q=Thanh+Nga+Seafood+Phu+Quoc",
+  }],
+  "Paradiso Restaurant / Beach Club": [{
+    src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/b9/89/b5/paradiso-restaurant.jpg?w=1200&h=900&s=1",
+    caption: "Paradiso Restaurant / Beach Club 海滩餐厅实景",
+    source: "Tripadvisor / Google 图片",
+    sourceUrl: "https://www.google.com/search?q=Paradiso+Restaurant+Beach+Club+Phu+Quoc",
+  }],
 };
+
 const cuisineFallbackImages = {
   "越南海鲜": [restaurantImageLookup["Xin Chao Seafood Restaurant"][0]],
   "美式海鲜": [restaurantImageLookup["Crab House Phu Quoc"][0]],
@@ -406,19 +506,19 @@ const cuisineFallbackImages = {
 const dayGalleries = [
   {
     title: "日落小镇・亲吻桥・烟花海岸",
-    images: [placeImages.kissBridge, placeImages.sunsetTown, placeImages.anThoi],
+    images: [placeImages.kissBridge, placeImages.sunsetTown, placeImages.anThoi, placeImages.phuQuocBeach],
   },
   {
     title: "An Thoi 港・Gam Ghi 浮潜・阳东夜市",
-    images: [placeImages.anThoi, placeImages.gamGhi, restaurantImageLookup["Xin Chao Seafood Restaurant"][0]],
+    images: [placeImages.anThoi, placeImages.gamGhi, restaurantImageLookup["Xin Chao Seafood Restaurant"][0], placeImages.phuQuocBeach],
   },
   {
     title: "跨海缆车・香岛乐园・Bai Sao 白沙滩",
-    images: [placeImages.cableCar, placeImages.aquatopia, placeImages.baiSao],
+    images: [placeImages.cableCar, placeImages.aquatopia, placeImages.baiSao, placeImages.cableTown],
   },
   {
     title: "酒店早餐・机场返程・南岛晨光",
-    images: [placeImages.phuQuocBeach, placeImages.anThoi, placeImages.cableTown],
+    images: [placeImages.phuQuocBeach, placeImages.anThoi, placeImages.cableTown, placeImages.kissBridge],
   },
 ];
 const routeImages = [
@@ -463,17 +563,15 @@ function normalizeImage(image, title, index) {
 }
 function imagesForRestaurant(r) {
   const primary = restaurantImageLookup[r.name] || cuisineFallbackImages[r.cuisine] || [placeImages.sunsetTown];
-  const areaFallback = r.area === "Bai Sao" ? placeImages.baiSao : r.area.includes("阳东") ? restaurantImageLookup["Xin Chao Seafood Restaurant"][0] : placeImages.kissBridge;
-  const candidates = [...primary, areaFallback, placeImages.sunsetTown, placeImages.phuQuocBeach];
   const seen = new Set();
-  return candidates
+  return primary
     .filter((image) => {
       const key = normalizeImage(image, r.name, 0).src;
       if (seen.has(key)) return false;
       seen.add(key);
       return true;
     })
-    .slice(0, 4);
+    .slice(0, 5);
 }
 function imageStrip(images, title, className = "image-strip") {
   return `<div class="${className}">${images
@@ -517,7 +615,7 @@ function render() {
   bind();
 }
 function overview() {
-  return `<section class="page hero"><div class="hero-card"><div class="hero-copy"><p class="eyebrow">2025 年 6 月 5 日（周五）— 6 月 8 日（周一）・4 天 3 夜</p><h1>行程概览</h1><p>主题是躺平躺平躺平！</p></div></div><section class="overview-module"><div class="module-head"><div><h2 class="big-module-title">四天三夜节奏</h2></div><span>4D3N / South Phu Quoc</span></div><div class="summary-grid">${days.map((d) => `<article class="summary-card"><div class="day-title"><span>${d.date}</span><b>${d.title}</b></div><p class="core">核心：${d.core}</p>${d.summary.map(([t, x]) => `<div class="summary-row"><em>${t}</em><span>${x}</span></div>`).join("")}</article>`).join("")}</div></section><section class="panel itinerary-panel"><div class="module-head"><div><h2 class="big-module-title">每日行程安排</h2></div></div>${days.map((d, di) => `<div class="day-plan"><div class="day-head"><h3><span class="day-date">${d.date}</span><span class="day-name">${d.title}</span></h3><span class="day-core">${d.core}</span></div><div class="day-gallery"><div><b>今日涵盖地点美图</b><span>${dayGalleries[di].title}</span></div>${imageStrip(dayGalleries[di].images, `${d.date} ${dayGalleries[di].title}`, "day-image-strip")}</div><div class="timeline">${d.items.map((it, ii) => `<div class="timeline-item"><div class="time">🕒 ${it[0]}</div><div class="event"><span class="tag" data-kind="${it[2]}">${it[2]}</span><p>${it[1]}</p></div><button class="favorite" data-di="${di}" data-ii="${ii}">♡ 收藏</button></div>`).join("")}</div><div class="notes"><b>餐饮・运力・注意事项</b>${d.notes.map((n) => `<p>● ${n}</p>`).join("")}</div></div>`).join("")}</section><section class="panel checklist"><h2>出发前 3 天・预订清单</h2><div>${preorder.map((x) => `<p>✅ ${x}</p>`).join("")}</div></section></section>`;
+  return `<section class="page hero"><div class="hero-card"><div class="hero-copy"><p class="eyebrow">2025 年 6 月 5 日（周五）— 6 月 8 日（周一）・4 天 3 夜</p><h1>富国岛行程概览</h1><p class="hero-subtitle-en">Phu Quoc Island Itinerary Overview</p><p>本期主题是体验浪漫的海岛风景~</p></div></div><section class="overview-module"><div class="module-head"><div><h2 class="big-module-title">四天三夜节奏</h2></div><span>4D3N / South Phu Quoc</span></div><div class="summary-grid">${days.map((d) => `<article class="summary-card"><div class="day-title"><span>${d.date}</span><b>${d.title}</b></div><p class="core">核心：${d.core}</p>${d.summary.map(([t, x]) => `<div class="summary-row"><em>${t}</em><span>${x}</span></div>`).join("")}</article>`).join("")}</div></section><section class="panel itinerary-panel"><div class="module-head"><div><h2 class="big-module-title">每日行程安排</h2></div></div>${days.map((d, di) => `<div class="day-plan"><div class="day-head"><h3><span class="day-date">${d.date}</span><span class="day-name">${d.title}</span></h3><span class="day-core">${d.core}</span></div><div class="day-gallery"><div><b>今日涵盖地点美图</b><span>${dayGalleries[di].title}</span></div>${imageStrip(dayGalleries[di].images, `${d.date} ${dayGalleries[di].title}`, "day-image-strip")}</div><div class="timeline">${d.items.map((it, ii) => `<div class="timeline-item"><div class="time">🕒 ${it[0]}</div><div class="event"><span class="tag" data-kind="${it[2]}">${it[2]}</span><p>${it[1]}</p></div><button class="favorite" data-di="${di}" data-ii="${ii}">♡ 收藏</button></div>`).join("")}</div><div class="notes"><b>餐饮・运力・注意事项</b>${d.notes.map((n) => `<p>● ${n}</p>`).join("")}</div></div>`).join("")}</section><section class="panel checklist"><h2>出发前 3 天・预订清单</h2><div>${preorder.map((x) => `<p>✅ ${x}</p>`).join("")}</div></section></section>`;
 }
 
 function food(sort = "distance", cuisine = "全部") {

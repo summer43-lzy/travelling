@@ -190,6 +190,15 @@ h1 {
   letter-spacing: -0.04em;
   color: white;
 }
+.hero-subtitle-en {
+  margin: 8px 0 0;
+  color: rgba(234, 244, 255, 0.78);
+  font-size: clamp(13px, 1.8vw, 17px);
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
 h2 {
   margin: 0 0 20px;
   font-size: 25px;
@@ -992,8 +1001,9 @@ select {
   box-shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
 }
 .modal-heart {
-  color: #68b7ff;
+  color: #ff3b5c;
   font-size: 32px;
+  text-shadow: 0 10px 28px rgba(255, 59, 92, 0.35);
 }
 .modal textarea {
   width: 100%;
