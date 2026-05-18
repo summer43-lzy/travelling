@@ -309,10 +309,10 @@ let calendarText =
 
 const placeImages = {
   kissBridge: {
-    src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kiss%20Bridge,%20Phu%20Quoc%20%2852680897656%29.jpg",
-    caption: "亲吻桥 Kiss Bridge 实景",
+    src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kiss_Bridge_at_sunset_Phu_Quoc_Island_Vietnam.jpg?width=640",
+    caption: "亲吻桥 Kiss Bridge 日落实景",
     source: "Wikimedia Commons",
-    sourceUrl: "https://commons.wikimedia.org/wiki/File:Kiss_Bridge,_Phu_Quoc_(52680897656).jpg",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Kiss_Bridge_at_sunset_Phu_Quoc_Island_Vietnam.jpg",
   },
   sunsetTown: {
     src: "https://visitphuquoc.com.vn/VisitPhuQuoc/_default_upload_bucket/1827/image-thumb__1827__720_jpg/nha%20hang%20bia%20sun%20bavaria%20bistro%203%402x.9e2a84e2.673fd9b6.jpg",
@@ -321,22 +321,22 @@ const placeImages = {
     sourceUrl: "https://visitphuquoc.com.vn/en/sun-bavaria-gastropub",
   },
   cableCar: {
-    src: "https://commons.wikimedia.org/wiki/Special:FilePath/Hon%20Thom%20Cable%20Car%20aerial%20view%20Phu%20Quoc%20Island%20Vietnam.jpg",
+    src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/H%C3%B2n_Th%C6%A1m_cable_car_above_the_An_Th%E1%BB%9Bi_township.jpg?width=640",
     caption: "Hon Thom 跨海缆车实景",
     source: "Wikimedia Commons",
-    sourceUrl: "https://commons.wikimedia.org/wiki/File:Hon_Thom_Cable_Car_aerial_view_Phu_Quoc_Island_Vietnam.jpg",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:H%C3%B2n_Th%C6%A1m_cable_car_above_the_An_Th%E1%BB%9Bi_township.jpg",
   },
   cableTown: {
-    src: "https://commons.wikimedia.org/wiki/Special:FilePath/H%C3%B2n%20Th%C6%A1m%20cable%20car%20above%20the%20An%20Th%E1%BB%9Bi%20township.jpg",
+    src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/H%C3%B2n_Th%C6%A1m_cable_car_above_the_An_Th%E1%BB%9Bi_township.jpg?width=640",
     caption: "缆车穿越 An Thoi 镇实景",
     source: "Wikimedia Commons",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:H%C3%B2n_Th%C6%A1m_cable_car_above_the_An_Th%E1%BB%9Bi_township.jpg",
   },
   baiSao: {
-    src: "https://commons.wikimedia.org/wiki/Special:FilePath/Star%20Beach%20%28B%C3%A3i%20Sao%29.jpg",
-    caption: "Bai Sao 白沙滩实景",
+    src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kem_Beach_aerial_view_Phu_Quoc_Island_Vietnam.jpg?width=640",
+    caption: "Bai Sao / Kem Beach 白沙滩实景",
     source: "Wikimedia Commons",
-    sourceUrl: "https://commons.wikimedia.org/wiki/File:Star_Beach_(B%C3%A3i_Sao).jpg",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Kem_Beach_aerial_view_Phu_Quoc_Island_Vietnam.jpg",
   },
   gamGhi: {
     src: "https://www.snorkeling-report.com/wp-content/uploads/2020/12/phuquoc002.jpg",
@@ -345,19 +345,19 @@ const placeImages = {
     sourceUrl: "https://www.snorkeling-report.com/spot/snorkeling-gam-ghi-island/",
   },
   phuQuocBeach: {
-    src: "https://commons.wikimedia.org/wiki/Special:FilePath/Beach%20at%20Phu%20Quoc%20National%20Park.jpg",
+    src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kem_Beach_aerial_view_Phu_Quoc_Island_Vietnam.jpg?width=640",
     caption: "富国岛海岸实景",
     source: "Wikimedia Commons",
-    sourceUrl: "https://commons.wikimedia.org/wiki/File:Beach_at_Phu_Quoc_National_Park.jpg",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Kem_Beach_aerial_view_Phu_Quoc_Island_Vietnam.jpg",
   },
   anThoi: {
-    src: "https://commons.wikimedia.org/wiki/Special:FilePath/Santo-port-7.jpg",
+    src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/L%C3%A0ng_ch%C3%A0i,_an_th%E1%BB%9Bi,_Phuquoc,_vietnam_-_panoramio.jpg?width=640",
     caption: "An Thoi / 南岛港区实景",
     source: "Wikimedia Commons",
-    sourceUrl: "https://commons.wikimedia.org/wiki/File:Santo-port-7.jpg",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:L%C3%A0ng_ch%C3%A0i,_an_th%E1%BB%9Bi,_Phuquoc,_vietnam_-_panoramio.jpg",
   },
   aquatopia: {
-    src: "https://commons.wikimedia.org/wiki/Special:FilePath/Cong-vien-nuoc-aquatopia-5.jpg",
+    src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cong-vien-nuoc-aquatopia-5.jpg?width=640",
     caption: "香岛乐园 / Aquatopia 实景",
     source: "Wikimedia Commons",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Cong-vien-nuoc-aquatopia-5.jpg",
@@ -427,6 +427,29 @@ const routeImages = [
   [placeImages.kissBridge, placeImages.sunsetTown, placeImages.cableTown],
 ];
 const regionImages = [placeImages.kissBridge, placeImages.baiSao, placeImages.cableCar];
+const regionReviewHighlights = {
+  south: [
+    "携程日落小镇点评高频词：日落、建筑、海边步道都很出片，黄昏时橘色天空和海面最有氛围。",
+    "游客常提到小镇适合边走边拍，咖啡、餐厅、旅馆集中，住在南岛能把烟花后返程压力降到最低。",
+    "亲吻桥和缆车站距离很近，司机通常熟悉打卡点；建议下午晚些时候到达，避开正午暴晒。",
+  ],
+  central: [
+    "携程富国夜市点评高频词：海鲜、烧烤、热带水果和椰子冰集中，是晚上不知道去哪时的稳妥选择。",
+    "阳东镇被游客视作富国岛的生活与商业中心，伴手礼、超市、药妆补给比南岛更成熟。",
+    "夜市热闹但价格差异明显，建议先看明码标价和鲜活程度，团队点海鲜最好统一议价、统一结账。",
+  ],
+  north: [
+    "携程珍珠野生动物园点评高频词：亲子友好、能近距离看长颈鹿等动物，树荫较多但仍要防晒。",
+    "珍珠游乐园 / VinWonders 常被评价为适合玩一整天，水上乐园、主题区和夜间表演组合丰富。",
+    "北部景点分量大、路程长，更适合 5 天以上行程；4 天 3 夜团队若硬塞北部，容易压缩南岛休整时间。",
+  ],
+};
+function fallbackImageData(title) {
+  const safeTitle = encodeURIComponent(title || "富国岛旅行图片");
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="348" height="232" viewBox="0 0 348 232"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b4fa3"/><stop offset="0.52" stop-color="#0e7490"/><stop offset="1" stop-color="#facc15"/></linearGradient></defs><rect width="348" height="232" rx="22" fill="url(#g)"/><circle cx="292" cy="52" r="24" fill="#fff3b0" opacity=".85"/><path d="M0 158 C56 130 96 184 150 154 C214 119 246 170 348 136 L348 232 L0 232 Z" fill="#031225" opacity=".58"/><path d="M0 178 C68 151 117 204 177 174 C238 144 287 185 348 160 L348 232 L0 232 Z" fill="#38bdf8" opacity=".32"/><text x="24" y="62" font-family="Arial, sans-serif" font-size="20" font-weight="800" fill="#fff">${safeTitle}</text><text x="24" y="92" font-family="Arial, sans-serif" font-size="13" fill="#dbeafe">图片加载失败，保留地点名称方便识别</text></svg>`;
+  return `data:image/svg+xml;charset=UTF-8,${svg}`;
+}
+
 function normalizeImage(image, title, index) {
   if (typeof image === "string") {
     return { src: image, caption: `${title} · 图 ${index + 1}`, source: "图片来源", sourceUrl: image };
@@ -439,15 +462,29 @@ function normalizeImage(image, title, index) {
   };
 }
 function imagesForRestaurant(r) {
-  return restaurantImageLookup[r.name] || cuisineFallbackImages[r.cuisine] || [placeImages.sunsetTown];
+  const primary = restaurantImageLookup[r.name] || cuisineFallbackImages[r.cuisine] || [placeImages.sunsetTown];
+  const areaFallback = r.area === "Bai Sao" ? placeImages.baiSao : r.area.includes("阳东") ? restaurantImageLookup["Xin Chao Seafood Restaurant"][0] : placeImages.kissBridge;
+  const candidates = [...primary, areaFallback, placeImages.sunsetTown, placeImages.phuQuocBeach];
+  const seen = new Set();
+  return candidates
+    .filter((image) => {
+      const key = normalizeImage(image, r.name, 0).src;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    })
+    .slice(0, 4);
 }
 function imageStrip(images, title, className = "image-strip") {
   return `<div class="${className}">${images
     .map((image, i) => {
       const meta = normalizeImage(image, title, i);
-      return `<button class="zoomable" data-img="${esc(meta.src)}" data-title="${esc(meta.caption)}" data-source="${esc(meta.source)}" data-source-url="${esc(meta.sourceUrl)}" aria-label="放大查看 ${esc(meta.caption)}"><img src="${esc(meta.src)}" alt="${esc(meta.caption)}" loading="lazy"><span class="image-caption">${esc(meta.caption)}<small>${esc(meta.source)}</small></span></button>`;
+      return `<button class="zoomable" data-img="${esc(meta.src)}" data-title="${esc(meta.caption)}" data-source="${esc(meta.source)}" data-source-url="${esc(meta.sourceUrl)}" aria-label="放大查看 ${esc(meta.caption)}"><img src="${esc(meta.src)}" alt="${esc(meta.caption)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${fallbackImageData(meta.caption)}';"><span class="image-caption">${esc(meta.caption)}<small>${esc(meta.source)}</small></span></button>`;
     })
     .join("")}</div>`;
+}
+function reviewList(items) {
+  return `<div class="region-review"><b>携程热门点评前三提炼</b><ol>${items.map((item) => `<li>${esc(item)}</li>`).join("")}</ol></div>`;
 }
 function esc(s) {
   return String(s).replace(
@@ -480,7 +517,7 @@ function render() {
   bind();
 }
 function overview() {
-  return `<section class="page hero"><div class="hero-card"><div class="hero-copy"><p class="eyebrow">2025 年 6 月 5 日（周五）— 6 月 8 日（周一）・4 天 3 夜</p><h1>行程概览</h1><p>主题是躺平躺平躺平！</p></div></div><section class="overview-module"><div class="module-head"><div><h2 class="big-module-title">四天节奏</h2></div><span>4D3N / South Phu Quoc</span></div><div class="summary-grid">${days.map((d) => `<article class="summary-card"><div class="day-title"><span>${d.date}</span><b>${d.title}</b></div><p class="core">核心：${d.core}</p>${d.summary.map(([t, x]) => `<div class="summary-row"><em>${t}</em><span>${x}</span></div>`).join("")}</article>`).join("")}</div></section><section class="panel itinerary-panel"><div class="module-head"><div><h2 class="big-module-title">每日行程安排</h2></div></div>${days.map((d, di) => `<div class="day-plan"><div class="day-head"><h3><span class="day-date">${d.date}</span><span class="day-name">${d.title}</span></h3><span class="day-core">${d.core}</span></div><div class="day-gallery"><div><b>今日涵盖地点美图</b><span>${dayGalleries[di].title}</span></div>${imageStrip(dayGalleries[di].images, `${d.date} ${dayGalleries[di].title}`, "day-image-strip")}</div><div class="timeline">${d.items.map((it, ii) => `<div class="timeline-item"><div class="time">🕒 ${it[0]}</div><div class="event"><span class="tag" data-kind="${it[2]}">${it[2]}</span><p>${it[1]}</p></div><button class="favorite" data-di="${di}" data-ii="${ii}">♡ 收藏</button></div>`).join("")}</div><div class="notes"><b>餐饮・运力・注意事项</b>${d.notes.map((n) => `<p>● ${n}</p>`).join("")}</div></div>`).join("")}</section><section class="panel checklist"><h2>出发前 3 天・预订清单</h2><div>${preorder.map((x) => `<p>✅ ${x}</p>`).join("")}</div></section></section>`;
+  return `<section class="page hero"><div class="hero-card"><div class="hero-copy"><p class="eyebrow">2025 年 6 月 5 日（周五）— 6 月 8 日（周一）・4 天 3 夜</p><h1>行程概览</h1><p>主题是躺平躺平躺平！</p></div></div><section class="overview-module"><div class="module-head"><div><h2 class="big-module-title">四天三夜节奏</h2></div><span>4D3N / South Phu Quoc</span></div><div class="summary-grid">${days.map((d) => `<article class="summary-card"><div class="day-title"><span>${d.date}</span><b>${d.title}</b></div><p class="core">核心：${d.core}</p>${d.summary.map(([t, x]) => `<div class="summary-row"><em>${t}</em><span>${x}</span></div>`).join("")}</article>`).join("")}</div></section><section class="panel itinerary-panel"><div class="module-head"><div><h2 class="big-module-title">每日行程安排</h2></div></div>${days.map((d, di) => `<div class="day-plan"><div class="day-head"><h3><span class="day-date">${d.date}</span><span class="day-name">${d.title}</span></h3><span class="day-core">${d.core}</span></div><div class="day-gallery"><div><b>今日涵盖地点美图</b><span>${dayGalleries[di].title}</span></div>${imageStrip(dayGalleries[di].images, `${d.date} ${dayGalleries[di].title}`, "day-image-strip")}</div><div class="timeline">${d.items.map((it, ii) => `<div class="timeline-item"><div class="time">🕒 ${it[0]}</div><div class="event"><span class="tag" data-kind="${it[2]}">${it[2]}</span><p>${it[1]}</p></div><button class="favorite" data-di="${di}" data-ii="${ii}">♡ 收藏</button></div>`).join("")}</div><div class="notes"><b>餐饮・运力・注意事项</b>${d.notes.map((n) => `<p>● ${n}</p>`).join("")}</div></div>`).join("")}</section><section class="panel checklist"><h2>出发前 3 天・预订清单</h2><div>${preorder.map((x) => `<p>✅ ${x}</p>`).join("")}</div></section></section>`;
 }
 
 function food(sort = "distance", cuisine = "全部") {
@@ -562,11 +599,11 @@ function food(sort = "distance", cuisine = "全部") {
     )
     .join(
       "",
-    )}</div></div><div class="filter">🔎 选择菜式：<select id="cuisine">${cuisines.map((t) => `<option ${t === cuisine ? "selected" : ""}>${t}</option>`).join("")}</select></div><div class="food-list">${list.map((r, i) => `<article class="food-card food-list-card"><div class="food-main"><div class="food-card-head"><span class="rank">#${i + 1}</span><h3>${r.name}</h3></div><p>${r.why}</p>${imageStrip(imagesForRestaurant(r), r.name)}</div><div class="meta food-tags"><span>${r.distance} km</span><span>⭐ ${r.rating}</span><span>${r.cuisine}</span><span>${r.area}</span></div></article>`).join("")}</div></section><section class="panel"><div class="module-head"><div><h2>最佳游玩线路</h2></div></div><div class="route-list">${routePlans.map((r, i) => `<article class="route route-list-card">${imageStrip(routeImages[i], r.title, "route-image-strip")}<div class="route-title"><span class="rank">路线 ${i + 1}</span><div><h3>${r.title}</h3><p>${r.best}</p></div></div><div class="route-body"><div><b>推荐动线</b><ol>${r.stops.map((s) => `<li>${s}</li>`).join("")}</ol></div><div><b>推荐理由</b><p>${r.reason}</p><b>推荐详情</b><ul>${r.details.map((d) => `<li>${d}</li>`).join("")}</ul></div></div></article>`).join("")}</div></section></section>`;
+    )}</div></div><div class="filter">🔎 选择菜式：<select id="cuisine">${cuisines.map((t) => `<option ${t === cuisine ? "selected" : ""}>${t}</option>`).join("")}</select></div><div class="food-list">${list.map((r, i) => `<article class="food-card food-list-card"><div class="food-main"><div class="food-card-head"><span class="rank">#${i + 1}</span><h3>${r.name}</h3></div><p>${r.why}</p>${imageStrip(imagesForRestaurant(r), r.name)}</div><div class="meta food-tags"><span>${r.distance} km</span><span>⭐ ${r.rating}</span><span>${r.cuisine}</span><span>${r.area}</span></div></article>`).join("")}</div></section><section class="panel"><div class="module-head"><div><h2>最佳游玩线路</h2></div></div><div class="route-list">${routePlans.map((r, i) => `<article class="route route-list-card"><div class="route-title"><span class="rank">路线 ${i + 1}</span><div><h3>${r.title}</h3><p>${r.best}</p></div></div>${imageStrip(routeImages[i], r.title, "route-image-strip")}<div class="route-body"><div><b>推荐动线</b><ol>${r.stops.map((s) => `<li>${s}</li>`).join("")}</ol></div><div><b>推荐理由</b><p>${r.reason}</p><b>推荐详情</b><ul>${r.details.map((d) => `<li>${d}</li>`).join("")}</ul></div></div></article>`).join("")}</div></section></section>`;
 }
 
 function region() {
-  return `<section class="page region-page"><div class="page-title"><span>📍</span><div><p class="eyebrow">地理位置、交通分区、6 月气候、风俗生活速览</p><h1>地域介绍</h1></div></div><section class="region-hero-v2 vietnam-hero"><div class="map-card vietnam-map-card advanced-map" aria-label="越南地图与富国岛位置示意"><div class="vietnam-map"><span class="country-label">VIETNAM</span><span class="geo-grid lat-a">10°N</span><span class="geo-grid lat-b">12°N</span><span class="geo-grid lon-a">104°E</span><span class="geo-grid lon-b">106°E</span><span class="sea-label">GULF OF THAILAND</span><span class="city-dot hanoi">河内</span><span class="city-dot danang">岘港</span><span class="city-dot hcmc">胡志明市</span><span class="phu-quoc-marker">📍 富国岛<br><small>10.2899°N, 103.9840°E</small></span><span class="travel-arc arc-hcmc"></span><span class="map-scale">约 45 km 南北纵深</span></div><div class="map-legend"><b>在越南哪里？</b><span>越南西南部・坚江省・泰国湾，靠近柬埔寨海岸；定位约 <strong>10.2899°N, 103.9840°E</strong>。</span></div></div><div class="region-intro-card"><span class="region-kicker">PHU QUOC / KIEN GIANG</span><h2>富国岛在越南哪里？</h2><p><strong>富国岛位于越南西南部坚江省</strong>，坐落在<strong>泰国湾</strong>，是越南面积最大的海岛之一。它距离胡志明市飞行约 <strong>1 小时</strong>，和柬埔寨海岸隔海相望；从旅行体验上看，它不是传统城市观光目的地，而是以<strong>海岛度假、海鲜夜市、出海浮潜、主题乐园和南岛拍照动线</strong>为主的复合型目的地。</p><p>本次 <strong>4 天 3 夜住在南岛日落小镇附近</strong>，核心优势是步行可覆盖<strong>亲吻桥、烟花秀与缆车站</strong>，第二天去 <strong>An Thoi 港</strong>出海也更顺；中部阳东镇作为<strong>夜市、海鲜和伴手礼补给点</strong>，北部生态海滩适合二刷或更长假期。</p><div class="region-stat-grid"><span><b>地理</b>泰国湾西南海岛</span><span><b>坐标</b>10.2899°N / 103.9840°E</span><span><b>人文</b>渔业、鱼露与胡椒文化</span></div>${imageStrip(regionImages, "富国岛地域印象", "region-image-strip")}</div></section><section class="region-flow panel"><div class="module-head"><div><p class="eyebrow">地理 + 人文快速理解</p><h2>从 4 个角度认识富国岛</h2></div><span>先地图・再背景</span></div><div class="flow-steps"><article><span>01</span><b>地理位置</b><p>岛屿<strong>南北狭长</strong>，机场在中南部，南端 <strong>An Thoi 群岛</strong>适合出海，西岸更适合看日落。</p></article><article><span>02</span><b>人文底色</b><p>传统产业包括<strong>渔业、鱼露、珍珠和胡椒</strong>；夜市与海鲜餐厅能看到更本地的生活烟火气。</p></article><article><span>03</span><b>度假开发</b><p>南岛集中<strong>日落小镇、亲吻桥、跨海缆车和主题乐园</strong>，适合短途团队高效打卡。</p></article><article><span>04</span><b>沟通语言</b><p><strong>越南语是主语言</strong>；酒店、餐厅、船公司可用英语关键词沟通，地址和预订信息建议截图保存。</p></article></div></section><div class="region-layout"><section class="panel region-zones"><h2>三大旅行分区</h2><div class="region-list"><article class="zone-south"><b>南岛｜日落小镇 / 亲吻桥 / 缆车</b><p><strong>拍照、表演、烟花、跨海缆车和主题乐园最集中。</strong>本次住宿在南岛，适合把第一晚、第三天的重点都放在这里，减少 10 人团频繁换乘。</p></article><article class="zone-central"><b>中部｜阳东镇 / 夜市 / 海鲜餐厅</b><p><strong>餐饮选择最多，夜市、海鲜餐厅、咖啡和伴手礼更成熟。</strong>第二天出海后去中部吃晚餐，能补足本地烟火气，也方便统一采购。</p></article><article class="zone-north"><b>北部｜生态海滩 / 度假酒店群</b><p><strong>节奏更慢、路程更长。</strong>更适合二刷或 5 天以上深度度假，本次短途团队不建议硬塞北部，以免交通消耗压缩躺平时间。</p></article></div></section><section class="panel weather-card"><h2>6 月气候与行程策略</h2><p><strong>6 月 5 日—8 日处在雨季初期</strong>，高温、高湿、阵雨概率上升，但常见形态是<strong>短时阵雨或午后天气变化</strong>，并不等于全天无法游玩。</p><ul class="focus-list"><li><b>上午：</b>优先安排出海、缆车、乐园排队等关键动作。</li><li><b>午后：</b>保留休整、按摩、酒店泳池、咖啡馆等弹性选项。</li><li><b>傍晚：</b>选择日落小镇、亲吻桥、夜市等就近场景，降低临时降雨影响。</li></ul><div class="advice"><b>本次出行建议</b><p>每人准备轻薄雨衣、防水袋、防晒霜、速干衣；包船当天早晨确认海况和返航时间；缆车当天向前台复核停运时段；白沙滩慢跑尽量选择退潮后更平整的水线。</p></div></section></div><section class="panel culture-panel"><h2>当地风俗、饮食与团队沟通重点</h2><div class="culture-grid"><article><span>🍤</span><b>饮食关键词</b><p><strong>海鲜、鱼露、胡椒、热带水果、越南粉类小吃</strong>是富国岛餐饮主线。10 人团建议预订主菜拼盘，再现场补点小吃，避免每人单点导致出餐慢。</p></article><article><span>🙏</span><b>礼貌与风俗</b><p>进入寺庙或本地社区空间建议<strong>衣着得体</strong>；拍摄服务人员、摊主或儿童前先询问；夜市议价保持友好。</p></article><article><span>🗣️</span><b>语言与支付</b><p>建议保存<strong>越南文地址、餐厅截图和预订凭证</strong>；小摊更偏现金，酒店和大型餐厅刷卡更稳定。</p></article></div></section></section>`;
+  return `<section class="page region-page"><div class="page-title"><span>📍</span><div><p class="eyebrow">地理位置、交通分区、6 月气候、风俗生活速览</p><h1>地域介绍</h1></div></div><section class="region-hero-v2 vietnam-hero"><div class="map-card vietnam-map-card advanced-map" aria-label="越南地图与富国岛位置示意"><div class="vietnam-map"><span class="country-label">VIETNAM</span><span class="geo-grid lat-a">10°N</span><span class="geo-grid lat-b">12°N</span><span class="geo-grid lon-a">104°E</span><span class="geo-grid lon-b">106°E</span><span class="sea-label">GULF OF THAILAND</span><span class="city-dot hanoi">河内</span><span class="city-dot danang">岘港</span><span class="city-dot hcmc">胡志明市</span><span class="phu-quoc-marker">📍 富国岛<br><small>10.2899°N, 103.9840°E</small></span><span class="travel-arc arc-hcmc"></span><span class="map-scale">约 45 km 南北纵深</span></div><div class="map-legend"><b>在越南哪里？</b><span>越南西南部・坚江省・泰国湾，靠近柬埔寨海岸；定位约 <strong>10.2899°N, 103.9840°E</strong>。</span></div></div><div class="region-intro-card"><span class="region-kicker">PHU QUOC / KIEN GIANG</span><h2>富国岛在越南哪里？</h2><p><strong>富国岛位于越南西南部坚江省</strong>，坐落在<strong>泰国湾</strong>，是越南面积最大的海岛之一。它距离胡志明市飞行约 <strong>1 小时</strong>，和柬埔寨海岸隔海相望；从旅行体验上看，它不是传统城市观光目的地，而是以<strong>海岛度假、海鲜夜市、出海浮潜、主题乐园和南岛拍照动线</strong>为主的复合型目的地。</p><p>本次 <strong>4 天 3 夜住在南岛日落小镇附近</strong>，核心优势是步行可覆盖<strong>亲吻桥、烟花秀与缆车站</strong>，第二天去 <strong>An Thoi 港</strong>出海也更顺；中部阳东镇作为<strong>夜市、海鲜和伴手礼补给点</strong>，北部生态海滩适合二刷或更长假期。</p><div class="region-stat-grid"><span><b>地理</b>泰国湾西南海岛</span><span><b>坐标</b>10.2899°N / 103.9840°E</span><span><b>人文</b>渔业、鱼露与胡椒文化</span></div>${imageStrip(regionImages, "富国岛地域印象", "region-image-strip")}</div></section><section class="region-flow panel"><div class="module-head"><div><p class="eyebrow">地理 + 人文快速理解</p><h2>从 4 个角度认识富国岛</h2></div><span>先地图・再背景</span></div><div class="flow-steps"><article><span>01</span><b>地理位置</b><p>岛屿<strong>南北狭长</strong>，机场在中南部，南端 <strong>An Thoi 群岛</strong>适合出海，西岸更适合看日落。</p></article><article><span>02</span><b>人文底色</b><p>传统产业包括<strong>渔业、鱼露、珍珠和胡椒</strong>；夜市与海鲜餐厅能看到更本地的生活烟火气。</p></article><article><span>03</span><b>度假开发</b><p>南岛集中<strong>日落小镇、亲吻桥、跨海缆车和主题乐园</strong>，适合短途团队高效打卡。</p></article><article><span>04</span><b>沟通语言</b><p><strong>越南语是主语言</strong>；酒店、餐厅、船公司可用英语关键词沟通，地址和预订信息建议截图保存。</p></article></div></section><section class="panel region-zones"><h2>三大旅行分区</h2><p class="region-section-lead">富国岛南北狭长，不同区域的体验差异很明显：南岛适合短途团队高效打卡和住在景点旁，中部适合夜市与海鲜补给，北部适合亲子乐园和生态度假。以下结合携程景点页与用户点评的高频反馈，按本次 4 天 3 夜团队动线重新整理。</p><div class="region-list region-list-expanded"><article class="zone-south"><b>南岛｜日落小镇 / 亲吻桥 / 缆车 / 香岛乐园</b><p><strong>本次团队主场，适合把第一晚和第三天重点都放在这里。</strong>日落小镇以地中海风格街区、亲吻桥、海之吻烟花表演和跨海缆车站形成步行半径；住在南岛的价值在于烟花结束后不用跨岛打车，第二天去 An Thoi 港出海也更顺。</p><p>玩法建议：傍晚先拍亲吻桥和海边建筑，晚餐选择小镇内餐厅，烟花后直接回酒店；第三天早上优先赶缆车早段，避免中午停运窗口。</p>${reviewList(regionReviewHighlights.south)}</article><article class="zone-central"><b>中部｜阳东镇 / 富国夜市 / 海鲜餐厅 / 伴手礼</b><p><strong>富国岛餐饮与生活补给最成熟的区域。</strong>阳东镇适合安排在出海回酒店休整之后，作为夜市、海鲜、咖啡、超市和伴手礼采购的集中补给点。这里比南岛更有本地生活烟火气，但晚高峰往返路程要预留缓冲。</p><p>玩法建议：10 人团到夜市不要边走边散点，建议先定集合点，再由 2-3 人统一询价点海鲜；不吃海鲜的成员可选择粉类、小吃、椰子冰和超市补给。</p>${reviewList(regionReviewHighlights.central)}</article><article class="zone-north"><b>北部｜珍珠乐园 / 野生动物园 / 生态海滩 / 度假酒店群</b><p><strong>更适合二刷、亲子或 5 天以上深度度假。</strong>北部的 VinWonders、Vinpearl Safari 和 Grand World 体量大、可玩时间长，但从南岛往返交通消耗明显；若本次 4 天 3 夜硬加北部，会压缩出海、缆车、白沙滩和酒店休整时间。</p><p>玩法建议：如果团队临时非常想去北部，应单独拿出一整天，而不是塞进出海或缆车日；否则建议保留为下次“亲子乐园 + 北部度假酒店”主题行程。</p>${reviewList(regionReviewHighlights.north)}</article></div></section><section class="panel weather-card weather-card-full"><h2>6 月气候与行程策略</h2><p><strong>6 月 5 日—8 日处在雨季初期</strong>，高温、高湿、阵雨概率上升，但常见形态是<strong>短时阵雨或午后天气变化</strong>，并不等于全天无法游玩。短途团队最重要的是把不可替代体验放在上午，把可替代体验放在下午或室内。</p><ul class="focus-list"><li><b>上午：</b>优先安排出海、缆车、乐园排队等关键动作；如果前台或船公司提示风浪偏大，第一时间确认替代方案。</li><li><b>午后：</b>保留休整、按摩、酒店泳池、咖啡馆、购物和自由活动，避免所有人顶着高温赶路。</li><li><b>傍晚：</b>选择日落小镇、亲吻桥、夜市等就近场景，降低临时降雨影响；拍照和晚餐都尽量提前约定集合点。</li><li><b>装备：</b>轻薄雨衣、防水袋、防晒霜、速干衣、拖鞋和备用干衣分装；电子设备统一放防水袋。</li></ul><div class="advice"><b>本次出行建议</b><p>每人准备轻薄雨衣、防水袋、防晒霜、速干衣；包船当天早晨确认海况和返航时间；缆车当天向前台复核停运时段；白沙滩慢跑尽量选择退潮后更平整的水线。若下午突降阵雨，不临时跨区追景点，优先改为酒店泳池、按摩、咖啡或提前晚餐。</p></div></section><section class="panel culture-panel"><h2>当地风俗、饮食的关注重点</h2><div class="culture-grid"><article><span>🍤</span><b>饮食关键词</b><p><strong>海鲜、鱼露、胡椒、热带水果、越南粉类小吃</strong>是富国岛餐饮主线。10 人团建议预订主菜拼盘，再现场补点小吃，避免每人单点导致出餐慢。</p></article><article><span>🙏</span><b>礼貌与风俗</b><p>进入寺庙或本地社区空间建议<strong>衣着得体</strong>；拍摄服务人员、摊主或儿童前先询问；夜市议价保持友好。</p></article><article><span>🗣️</span><b>语言与支付</b><p>建议保存<strong>越南文地址、餐厅截图和预订凭证</strong>；小摊更偏现金，酒店和大型餐厅刷卡更稳定。</p></article></div></section></section>`;
 }
 
 function login() {
@@ -638,7 +675,7 @@ function showImageModal(src, title, source, sourceUrl) {
   const sourceLine = sourceUrl
     ? `<a href="${esc(sourceUrl)}" target="_blank" rel="noopener">图片来源：${esc(source || "查看原图来源")}</a>`
     : "";
-  modal.innerHTML = `<div class="image-modal"><button class="image-modal-close" id="closeImage" aria-label="关闭图片">×</button><img src="${esc(src)}" alt="${esc(title)}"><p>${esc(title)}</p>${sourceLine}</div>`;
+  modal.innerHTML = `<div class="image-modal"><button class="image-modal-close" id="closeImage" aria-label="关闭图片">×</button><img src="${esc(src)}" alt="${esc(title)}" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${fallbackImageData(title)}';"><p>${esc(title)}</p>${sourceLine}</div>`;
   document.querySelector("#closeImage").onclick = () =>
     (modal.className = "modal-backdrop hidden");
   modal.onclick = (e) => {
