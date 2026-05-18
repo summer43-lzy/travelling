@@ -1494,6 +1494,55 @@ footer {
   line-height: 1;
 }
 
+/* Unified real-photo presentation */
+:root {
+  --travel-photo-height: 172px;
+}
+.zoomable {
+  min-height: var(--travel-photo-height);
+  aspect-ratio: 16 / 10;
+}
+.image-strip .zoomable:only-child,
+.day-image-strip .zoomable:only-child,
+.route-image-strip .zoomable:only-child,
+.region-image-strip .zoomable:only-child {
+  grid-column: 1 / -1;
+}
+.zoomable img {
+  height: 100%;
+  min-height: var(--travel-photo-height);
+}
+.image-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: block;
+  padding: 22px 10px 9px;
+  color: white;
+  background: linear-gradient(180deg, transparent, rgba(2, 8, 22, 0.86));
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.25;
+  text-align: left;
+  pointer-events: none;
+}
+.image-caption small {
+  display: block;
+  margin-top: 2px;
+  color: #b8d7ff;
+  font-size: 10px;
+  font-weight: 800;
+}
+.image-modal a {
+  display: inline-block;
+  margin: 0 6px 4px;
+  color: #9dd2ff;
+  font-size: 13px;
+  font-weight: 800;
+}
+
 /* Enhanced geo map details */
 .advanced-map .vietnam-map {
   background:
@@ -1559,8 +1608,11 @@ footer {
   .day-gallery {
     grid-template-columns: 1fr;
   }
+  :root {
+    --travel-photo-height: 210px;
+  }
   .zoomable,
   .zoomable img {
-    min-height: 170px;
+    min-height: var(--travel-photo-height);
   }
 }
