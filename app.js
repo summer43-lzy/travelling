@@ -610,6 +610,13 @@ function uniqueImages(images, title, limit = 5) {
     })
     .slice(0, limit);
 }
+
+function emphasizeChecklistItem(item) {
+  const [label, ...rest] = item.split("：");
+  if (!rest.length) return esc(item);
+  return `<strong>${esc(label)}：</strong>${esc(rest.join("："))}`;
+}
+
 function imagesForRestaurant(r) {
   const primary = restaurantImageLookup[r.name] || [];
   const cuisineFallback = cuisineFallbackImages[r.cuisine] || [];
@@ -674,7 +681,7 @@ function render() {
   bind();
 }
 function overview() {
-  return `<section class="page hero"><div class="hero-card"><div class="hero-copy"><p class="eyebrow">2025 年 6 月 5 日（周五）— 6 月 8 日（周一）・4 天 3 夜</p><h1>富国岛行程概览</h1><p class="hero-subtitle-en">Phu Quoc Island Itinerary Overview</p><p>本期主题是体验浪漫的海岛风景~</p></div></div><section class="overview-module"><div class="module-head"><div><h2 class="big-module-title">四天三夜节奏</h2></div><span>4D3N / South Phu Quoc</span></div><div class="summary-grid">${days.map((d) => `<article class="summary-card"><div class="day-title"><span>${d.date}</span><b>${d.title}</b></div><p class="core">核心：${d.core}</p>${d.summary.map(([t, x]) => `<div class="summary-row"><em>${t}</em><span>${x}</span></div>`).join("")}</article>`).join("")}</div></section><section class="panel itinerary-panel"><div class="module-head"><div><h2 class="big-module-title">每日行程安排</h2></div></div>${days.map((d, di) => `<div class="day-plan"><div class="day-head"><h3><span class="day-date">${d.date}</span><span class="day-name">${d.title}</span></h3><span class="day-core">${d.core}</span></div><div class="day-gallery"><div><b>今日涵盖地点美图</b><span>${dayGalleries[di].title}</span></div>${imageStrip(dayGalleries[di].images, `${d.date} ${dayGalleries[di].title}`, "day-image-strip")}</div><div class="timeline">${d.items.map((it, ii) => `<div class="timeline-item"><div class="time">🕒 ${it[0]}</div><div class="event"><span class="tag" data-kind="${it[2]}">${it[2]}</span><p>${it[1]}</p></div><button class="favorite" data-di="${di}" data-ii="${ii}">♡ 收藏</button></div>`).join("")}</div><div class="notes"><b>餐饮・运力・注意事项</b>${d.notes.map((n) => `<p>● ${n}</p>`).join("")}</div></div>`).join("")}</section><section class="panel checklist"><h2>出发前3天筹备清单</h2><div>${preorder.map((x) => `<p>✅ ${x}</p>`).join("")}</div></section></section>`;
+  return `<section class="page hero"><div class="hero-card"><div class="hero-copy"><p class="eyebrow">2025 年 6 月 5 日（周五）— 6 月 8 日（周一）・4 天 3 夜</p><h1>富国岛行程概览</h1><p class="hero-subtitle-en">Phu Quoc Island Itinerary Overview</p><p>本期主题是体验浪漫的海岛风景~</p></div></div><section class="overview-module"><div class="module-head"><div><h2 class="big-module-title">四天三夜节奏</h2></div><span>4D3N / South Phu Quoc</span></div><div class="summary-grid">${days.map((d) => `<article class="summary-card"><div class="day-title"><span>${d.date}</span><b>${d.title}</b></div><p class="core">核心：${d.core}</p>${d.summary.map(([t, x]) => `<div class="summary-row"><em>${t}</em><span>${x}</span></div>`).join("")}</article>`).join("")}</div></section><section class="panel itinerary-panel"><div class="module-head"><div><h2 class="big-module-title">每日行程安排</h2></div></div>${days.map((d, di) => `<div class="day-plan"><div class="day-head"><h3><span class="day-date">${d.date}</span><span class="day-name">${d.title}</span></h3><span class="day-core">${d.core}</span></div><div class="day-gallery"><div><b>今日涵盖地点美图</b><span>${dayGalleries[di].title}</span></div>${imageStrip(dayGalleries[di].images, `${d.date} ${dayGalleries[di].title}`, "day-image-strip")}</div><div class="timeline">${d.items.map((it, ii) => `<div class="timeline-item"><div class="time">🕒 ${it[0]}</div><div class="event"><span class="tag" data-kind="${it[2]}">${it[2]}</span><p>${it[1]}</p></div><button class="favorite" data-di="${di}" data-ii="${ii}">♡ 收藏</button></div>`).join("")}</div><div class="notes"><b>餐饮・运力・注意事项</b>${d.notes.map((n) => `<p>● ${n}</p>`).join("")}</div></div>`).join("")}</section><section class="panel checklist"><h2>出发前3天筹备清单</h2><div>${preorder.map((x) => `<p><span class="check-icon">✅</span><span>${emphasizeChecklistItem(x)}</span></p>`).join("")}</div></section></section>`;
 }
 
 function food(sort = "distance", cuisine = "全部") {
