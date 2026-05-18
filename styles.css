@@ -1795,3 +1795,125 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* Food toolbar placement: sorting appears directly after the Top heading. */
+.food-section-head {
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+.food-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: -2px 0 18px;
+}
+.sort-tabs {
+  width: fit-content;
+}
+
+/* More concrete Phu Quoc inset map layered over the Vietnam location map. */
+.phu-quoc-island-detail {
+  position: absolute;
+  z-index: 4;
+  left: 9%;
+  bottom: 23%;
+  width: 158px;
+  height: 238px;
+  border-radius: 48% 42% 46% 40% / 56% 46% 50% 44%;
+  background:
+    linear-gradient(180deg, rgba(34, 197, 94, 0.92), rgba(20, 184, 166, 0.88) 45%, rgba(251, 191, 36, 0.92)),
+    radial-gradient(circle at 52% 78%, rgba(255, 255, 255, 0.28), transparent 24%);
+  border: 2px solid rgba(255, 255, 255, 0.72);
+  box-shadow:
+    inset 0 0 32px rgba(3, 7, 18, 0.18),
+    0 18px 42px rgba(0, 0, 0, 0.34);
+  transform: rotate(-9deg);
+}
+.phu-quoc-island-detail:before {
+  content: "";
+  position: absolute;
+  inset: 16px 46px 18px 62px;
+  border-left: 2px dashed rgba(2, 8, 22, 0.36);
+  transform: rotate(5deg);
+}
+.phu-quoc-island-detail:after {
+  content: "";
+  position: absolute;
+  right: 16px;
+  bottom: 62px;
+  width: 54px;
+  height: 28px;
+  border-bottom: 2px dashed rgba(2, 8, 22, 0.36);
+  border-radius: 50%;
+  transform: rotate(18deg);
+}
+.island-title,
+.island-zone,
+.island-pin {
+  position: absolute;
+  z-index: 2;
+  transform: rotate(9deg);
+  color: #031225;
+  font-weight: 950;
+}
+.island-title {
+  left: 20px;
+  top: 12px;
+  color: rgba(3, 7, 18, 0.62);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+}
+.island-zone {
+  padding: 4px 6px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.72);
+  font-size: 11px;
+  line-height: 1.15;
+  box-shadow: 0 8px 18px rgba(3, 7, 18, 0.14);
+}
+.island-zone small {
+  display: block;
+  margin-top: 2px;
+  font-size: 8px;
+  font-weight: 800;
+  opacity: 0.72;
+  white-space: nowrap;
+}
+.zone-n { left: 44px; top: 38px; }
+.zone-c { left: 30px; top: 101px; }
+.zone-s { left: 39px; bottom: 32px; }
+.island-pin {
+  padding: 3px 6px;
+  border-radius: 999px;
+  color: white;
+  background: rgba(3, 7, 18, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.56);
+  font-size: 9px;
+  white-space: nowrap;
+}
+.island-pin:before {
+  content: "•";
+  margin-right: 3px;
+  color: #facc15;
+}
+.pin-hotel { right: -20px; bottom: 64px; }
+.pin-anthoi { right: -28px; bottom: 38px; }
+.pin-baisao { left: -15px; bottom: 54px; }
+
+@media (max-width: 680px) {
+  .food-toolbar {
+    align-items: stretch;
+  }
+  .sort-tabs,
+  .food-toolbar .filter {
+    width: 100%;
+  }
+  .phu-quoc-island-detail {
+    left: 6%;
+    bottom: 25%;
+    transform: rotate(-9deg) scale(0.82);
+    transform-origin: left bottom;
+  }
+}
